@@ -1,0 +1,246 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a,
+button {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+input {
+    border: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 32px;
+}
+
+:root {
+    --primary-bg: #02040a;
+    --secondary-bg: #0d1116;
+    --primary-text: #f0f6fc;
+    --secondary-text: #9097a0;
+    --primary-border: #3d444d;
+    --primary-card-btn-bg: #202830;
+}
+
+
+
+
+
+
+
+
+
+/* OVERLAY */
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: #0000007e;
+    z-index: 10;
+}
+
+.overlay.show {
+    display: block;
+}
+
+/* FORM POP-UP */
+.form_wrapper.show {
+    display: flex;
+}
+
+.form_wrapper {
+    display: none;
+    z-index: 11;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 500px;
+    border-radius: 12px;
+    border: 1px solid var(--primary-border);
+    padding: 32px 24px;
+    background-color: var(--secondary-bg);
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form_title {
+    color: var(--primary-text);
+}
+
+.form {
+    width: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 14px;
+}
+
+.input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    outline: none;
+    transition: .1s ease-out;
+    font-weight: 450;
+    color: black;
+}
+
+.input::placeholder {
+    color: rgb(177, 177, 177);
+}
+
+
+.form_add_btn_wrapper {
+    margin-top: 4px;
+    flex: 1;
+}
+
+.form_add_btn {
+    padding: 8px 12px;
+    border: 1px solid var(--primary-border);
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: var(--primary-card-btn-bg);
+    transition: .1s ease-out;
+    color: var(--primary-text);
+
+    &:hover {
+        background-color: #242d37;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* HEADER */
+.site_header {
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    border-bottom: 1px solid var(--primary-border);
+    position: sticky;
+    top: 0;
+}
+
+.nav {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav_logo {
+    a {
+        font-size: 28px;
+        font-weight: 500;
+    }
+}
+
+.nav_create_btn_wrapper {}
+
+.nav_create_btn {
+    padding: 12px 18px;
+    border: 1px solid var(--primary-border);
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    background-color: var(--primary-card-btn-bg);
+    transition: .1s ease-out;
+
+    &:hover {
+        background-color: #242d37;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* USERS */
+.section_users {
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--secondary-bg);
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.users_wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.users_card {
+    padding: 24px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--primary-border);
+    background-color: var(--primary-bg);
+    color: var(--primary-text);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.users_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 8px;
+    }
+}
+
+.users_body {}
+
+.users_body_title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.user_card_name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--primary-text);
+    text-transform: capitalize;
+}
+
+.user_card_price {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary-text);
+}
+
+.user_card_color {
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
