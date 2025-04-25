@@ -91,6 +91,7 @@ formEl.addEventListener("submit", (e) => {
     formEl.children[4].value = "";
     hideOverlay();
     hideForm();
+    localStorage.setItem("form", JSON.stringify(false));
 })
 
 if (isFormPoppedUp == true) {
